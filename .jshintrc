@@ -1,0 +1,37 @@
+{
+    "predef": [
+    ],
+
+    "node": true,
+
+    "bitwise"       : true,
+    "camelcase"     : true,
+    "curly"         : true,
+    "eqeqeq"        : true,
+    "forin"         : true,
+    "immed"         : true,
+    "indent"        : 4,
+    "latedef"       : "nofunc",
+    "newcap"        : true,
+    "noarg"         : true,
+    "noempty"       : true,
+    "nonew"         : true,
+    "quotmark"      : "single",
+    "undef"         : true,
+    "unused"        : true,
+    "strict"        : true,
+    "trailing"      : true,
+    "maxdepth"      : 3,
+    "maxstatements" : 10,
+    "maxcomplexity" : 5,
+    "expr"          : true,
+    "boss"          : true,
+    "undef" 		: true,
+    "unused" 		: true,
+    "curly"			: true,
+    "camelcase"		: false,
+    "node"			: true,
+    "-W065"			: true,
+    "-W099"			: true,
+    "-W109"			: true
+}

@@ -1,0 +1,55 @@
+{
+  "size": 4,
+  "index": "gmo.searches",
+  "type": "search",
+  "_source": [
+    "id",
+    "Products"
+  ],
+  "body": {
+    "query": {
+      "function_score": {
+        "script_score": {
+          "script": "(_score + 1) * doc['visits'].value"
+        },
+        "query": {
+          "bool": {
+            "should": [
+              {
+                "match": {
+                  "id": {
+                    "type": "phrase_prefix",
+                    "query": "{{query}}",
+                    "fuzziness": "AUTO",
+                    "prefix_length": 1,
+                    "max_expansions": 100,
+                    "boost": 1
+                  }
+                }
+              },
+              {
+                "match": {
+                  "ids": {
+                    "query": "{{query}}",
+                    "slop": 10,
+                    "operator": "and",
+                    "boost": 2
+                  }
+                }
+              },
+              {
+                "match": {
+                  "id": {
+                    "query": "{{query}}",
+                    "type": "phrase_prefix",
+                    "boost": 3
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

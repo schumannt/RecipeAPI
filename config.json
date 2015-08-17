@@ -1,0 +1,24 @@
+{
+	"azure":{
+		"port": 8081,
+		"elasticSearch": "10.128.0.4:9201",
+		"url":"http://localhost:",
+		"logPort":8091,
+		"logLevel":"DEBUG",
+		"logLevels":["ALL","TRACE","DEBUG","INFO","WARN","ERROR","FATAL","MARK","OFF"],
+		"LogFilePath": "/var/log/spiffy/spiffy.log",
+	  	"maxLogSizeBytes": 10000000,
+	  	"maxRotatedLogs":10
+	},
+	"localDev":{
+		"port": 8081,
+		"elasticSearch": "localhost:9200",
+		"url":"http://localhost:",
+		"logPort":8091,
+		"logLevel":"DEBUG",
+		"logLevels":["ALL","TRACE","DEBUG","INFO","WARN","ERROR","FATAL","MARK","OFF"],
+		"LogFilePath": "log/Recipe.log",
+	  	"maxLogSizeBytes": 10000000,
+	  	"maxRotatedLogs": 10
+	}
+}

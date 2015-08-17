@@ -1,0 +1,19 @@
+{
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "terms": {
+                        "recipe.ingredients": [{{query}}]
+                    }
+                }
+            ],
+            "must_not": [],
+            "should": []
+        }
+    },
+    "from": 0,
+    "size": 10,
+    "sort": [],
+    "facets": {}
+}
